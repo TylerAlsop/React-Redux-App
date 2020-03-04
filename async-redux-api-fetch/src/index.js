@@ -9,8 +9,10 @@ import { reducer } from './store/reducers';
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 
 const store = createStore(reducer, applyMiddleware(
+    thunk,
     ////other middleware, logger must be last
     logger
     )
