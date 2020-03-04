@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux';
+import {fetchingStart, fetchingSuccess, fetchingFailure} from './store/actions/index'
 
 function App() {
   return (
@@ -23,4 +25,13 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  console.log("State in mapStateToProps in App.js", state)
+  return {
+    data: state.data,
+    isFetching: state.isFetching,
+    error: state.error
+  }
+}
+
+export default connect(mapStateToProps, {fetchingStart, fetchingSuccess, fetchingFailure})(App);
