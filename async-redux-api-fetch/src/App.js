@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
-import {fetchingStart, fetchingSuccess, fetchingFailure} from './store/actions/index'
+import { getCatFact } from './store/actions/index'
 
 function App() {
   return (
@@ -34,4 +34,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {fetchingStart, fetchingSuccess, fetchingFailure})(App);
+export default connect(mapStateToProps, { getCatFact })(App);
