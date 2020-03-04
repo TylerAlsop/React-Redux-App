@@ -8,8 +8,13 @@ import { reducer } from './store/reducers';
 
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
+import logger from 'redux-logger';
 
-const store = createStore(reducer, applyMiddleware());
+const store = createStore(reducer, applyMiddleware(
+    ////other middleware, logger must be last
+    logger
+    )
+);
 
 ReactDOM.render(
     <Provider store={store}>
