@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Logo from './Cat.png'
 // import { connect } from 'react-redux';
 // import { getCatFact } from './store/actions/index';
 
@@ -9,8 +10,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Random Cat Facts!</h1>
-        <i className="fas fa-cat"></i>
+        <div className="title">
+          <h1>RANDOM CAT FACTS!</h1>
+          <img className="cat-logo" src={Logo} alt="cat icon" />
+        </div>
         <CatFacts />
       </header>
     </div>

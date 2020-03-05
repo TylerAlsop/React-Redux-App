@@ -5,7 +5,7 @@ import { getCatFact } from '../store/actions/index';
 
 const CatFacts = ({ getCatFact, catFact, isFetching, error }) => {
     if (isFetching) {
-        return <h2>Your Cat Fact Is Loading...</h2>
+        return <h2 className="loading-message">Your Cat Fact Is Loading...</h2>
     }
 
     return (

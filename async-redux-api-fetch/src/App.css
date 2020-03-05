@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0a2e75;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cat-logo {
+  height: 100px
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.get-fact-button {
+  color: white;
+  font-size: 25px;
+  background-color: green;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.cat-fact {
+  color: #a3a4a7;
+}
+
+.loading-message {
+  color: #a3a4a7;
 }

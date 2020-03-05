@@ -1,7 +1,7 @@
 import { FETCHING_START, FETCHING_SUCCESS, FETCHING_FAILURE } from '../actions';
 
 export const initialState = {
-    catFact: null,
+    catFact: "Click The Button To Get A Fact",
     isFetching: false,
     error: ""
 };
