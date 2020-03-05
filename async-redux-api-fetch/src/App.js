@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Random Cat Facts!</h1>
+        <i className="fas fa-cat"></i>
         <CatFacts />
       </header>
     </div>
