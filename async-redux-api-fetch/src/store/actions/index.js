@@ -9,12 +9,12 @@ export const getCatFact = () => dispatch => {
     dispatch({ type: FETCHING_START });
 
     axios
-        .get("https://cat-fact.herokuapp.com")
+        .get("https://catfact.ninja/fact")
         .then(res => {
             console.log("axios response", res);
             // send the action FETCHING_SUCCESS and update state
             // to show the fetched data
-            dispatch({ type: FETCHING_SUCCESS, payload: res.data });
+            dispatch({ type: FETCHING_SUCCESS, payload: res.data.fact });
         })
         .catch(err => {
             console.log("err", err);
@@ -22,7 +22,7 @@ export const getCatFact = () => dispatch => {
             // to show the error message
             dispatch({
             type: FETCHING_FAILURE,
-            payload: console.log("Error in Reaching API")
+            payload: `${err.response.message} with response code ${err.response.code}`
             });
         });
 
